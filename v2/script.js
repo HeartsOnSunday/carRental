@@ -24,13 +24,27 @@ var carRental = {
         ]
 };  
 
+// CREATING THE DROPDOWN:::
+// The <select> must be created outside the function (universal variable selectOption)
+var selectOption = document.createElement("SELECT");
+
+// this action to appendChild only needs to happen once!!!
+document.getElementById("important").appendChild(selectOption);
+
+
+// NEXT:::
+//the Dropdown has been created but it needs dynamic options in it!!
+
+
+//  NODE:::::
 //  nodeName is SELECT        console.log(document.getElementById("selection").nodeName);
 //   nodeName is OPTION       console.log(document.getElementById("invalid").nodeName);
 //   nodeName is OPTION        console.log(document.getElementById("midsize").nodeName);
 
+
 for (var i = 0; i < carRental.cars.length; i++) {
     //create select option
-     var selectOption = document.createElement("SELECT");
+   // var selectOption = document.createElement("SELECT");
    // create Atributes
    selectOption.setAttribute("size", "1");
    selectOption.setAttribute("name", "Windows");
@@ -40,7 +54,7 @@ for (var i = 0; i < carRental.cars.length; i++) {
    var options = document.createElement("OPTION");
    //create attributes
    options.innerHTML = carRental.cars[i].type;
-   document.getElementById("important").appendChild(selectOption);
+//   document.getElementById("important").appendChild(selectOption);
    document.getElementById("important").appendChild(options);
 }
 
@@ -58,7 +72,6 @@ function rentEco() {
 function rentMid() {
                     document.getElementById("mAvail").innerHTML = --carRental.mAvailability;
     }
-
 function showStats() {
                         var stats = document.forms["carForm"]["Windows"].value;
     if (stats == "midsize") {
@@ -72,7 +85,6 @@ function showStats() {
                         document.getElementById("eAvail").innerHTML = carRental.eAvailability;
     }
 }
-    
 function validateForm() {
         var x = document.forms["carForm"]["Windows"].value;
     
