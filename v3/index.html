@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: darkgray;
+            font-family: charter, sans-serif;
+        }
+        .well {
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">    
+        <div class="container-fluid text-center" id="banner"> 
+            <h1>Business Name</h1>
+            <p id="name"></p>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="well">
+                                <h3>Car Type</h3>
+                                <p id="eCars"></p>
+                                <p id="midCars"></p>
+                                <button class="btn btn-success" onclick="checkA()">Check Availability</button>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <div class="well">
+                                <h3>Available Economy Cars</h3> 
+                                <p id="eAvail"></p>
+                                <p id="ePrice"></p>
+                                <button class="btn btn-primary" onclick="rentEco()">Rent Economy Cars</button>
+                    </div>
+                </div>
+                
+                <div class="col-sm-4">
+                    <div class="well">
+                                <h3>Available Midsize Cars</h3>
+                                <p id="mAvail"></p>
+                                <p id="mPrice"></p>
+                                <button class="btn btn-primary" onclick="rentMid()">Rent Midsize Cars</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="well">
+                            <form name="carForm">
+                                    <div id="important">
+                                            <fieldset>
+                                                        <legend>Reserve Your Car Today</legend>
+                                                                <label>Enter Your Name:</label><br>
+                                                                <input type="text" name="newCustomer" id="newCustomer" pattern="[A-Za-z]+ [A-Za-z]+" placeholder="First Last" required=""><br>
+                                                                <label>Select Your Prefered Vehicle: </label><br>
+                                        <!--                                <select id="selection" name="Windows" size="1" onchange="showStats()">
+                                                                            <option id="invalid" value="">Please Make a Selection</option>    
+                                                                            <option id="midsize" name="midsize" value="midsize">Midsize Car</option>
+                                                                            <option id="economy" name="economy" value="economy">Economy Car</option><br>    ---->    
+                                            </fieldset>
+                                    </div>
+                                <br><input type="button" value="Submit" class="btn btn-primary" onclick="validateForm()"></input><br>
+                            </form>
+                     </div>
+                 </div>
+             </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+
+<!-- <button class="btn btn-primary" onclick="">Show me my rental options</button> 
+ <label>Select a Car Type</label><br>
+                                             <select name="Windows" size="1">
+                                             <option value="Always">Midsize Car</option>
+                                             <option value="Ofted">Economy Car</option>
+<br>
+<form action="mailto:ldelgiudice@HCHEnt.com" method="post" enctype="multipart/form-data">
+          <fieldset class="Essential">
+               <legend>Rent a Car Today</legend>
+               <label>Does your organization provide goods or services to the Federal Government?</label><br>
+               
+            
+                <label>Enter Your Name</label><br>
+                <input type="text" name="" placeholder="Name"></fieldset>
+               
+               <label>Select a Car Type</label><br>
+               <select name="Windows" size="1">
+                 <option value="Always">Midsize Car</option>
+                 <option value="Ofted">Economy Car</option>
+                 <br>
+             </fieldset>
+           <input type="submit" value="Submit"><input type="reset" value="Reset">
+        </form><br> -->
+        
+</body>
+</html>
