@@ -111,3 +111,33 @@ function validateForm() {
                         alert("You have selected the Economy Car");
     }
 }
+
+//Create a Function to display the data when a selection has been made on the dropdown
+//when the value of the dropdown changes the function will run
+
+
+document.getElementById("Windows").onchange = function reveal() {
+                        console.log("start on change function");
+                        var stats = document.forms["carForm"]["Windows"].value;
+    if (stats == "midsize") {
+                        document.getElementById("mPrice").innerHTML = carRental.mPrice;
+                        document.getElementById("midCars").innerHTML = carRental.midCars;
+                        document.getElementById("mAvail").innerHTML = carRental.mAvailability
+    }
+    if (stats == "economy") {
+                        document.getElementById("ePrice").innerHTML =carRental.ePrice;
+                        document.getElementById("eCars").innerHTML = carRental.ecars;
+                        document.getElementById("eAvail").innerHTML = carRental.eAvailability;
+    }
+}
+
+// document.getElementById("Windows").onchange = function(event) {
+//     event.preventDefault();
+//     if(!document.getElementById("confirmation").checked) {
+//         alert("Please agree to terms");
+//         return; 
+//         //return stops the code!
+//     }
+
+
+
